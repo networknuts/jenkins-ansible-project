@@ -7,7 +7,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout your source code repository
-                git 'https://github.com/your/repository.git'
+                git 'https://github.com/networknuts/jenkins-ansible-project.git'
             }
         }
         
