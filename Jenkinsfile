@@ -1,8 +1,6 @@
 pipeline {
-    agent any
-    
-    environment {
-        ANSIBLE_VERSION = '2.10.10' // Define the version of Ansible to use
+    agent { 
+        label 'ansible_node'
     }
     
     stages {
@@ -35,19 +33,12 @@ pipeline {
                 sh 'ansible-playbook -i inventory playbook.yml'
             }
         }
-        
-        stage('Cleanup') {
-            steps {
-                // Clean up any temporary files or resources
-                sh 'rm -rf some_temporary_files'
-            }
-        }
     }
     
     post {
         always {
             // Archive the Ansible playbook execution logs
-            archiveArtifacts 'logs/*.log'
+            archiveArtifacts '*.log'
         }
         
         success {
