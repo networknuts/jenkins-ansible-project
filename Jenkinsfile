@@ -23,7 +23,7 @@ pipeline {
         stage('Linting') {
             steps {
                 // Run Ansible playbook syntax check and linting
-                sh 'ansible-playbook playbook.yml --syntax-check'
+                sh 'ansible-playbook playbook.yml -i inventory --syntax-check'
                 sh 'ansible-lint playbook.yml'
             }
         }
