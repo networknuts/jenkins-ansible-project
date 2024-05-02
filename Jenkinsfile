@@ -15,7 +15,7 @@ pipeline {
         stage('Verify Ansible Installation') {
             steps {
                 // Install required packages and dependencies
-                sh 'whereis ansible-navigator'
+                sh 'whereis ansible-lint'
                 sh 'whereis ansible-playbook'
             }
         }
