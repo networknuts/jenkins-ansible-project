@@ -1,7 +1,7 @@
 ---
 - name: Simple playbook for jenkins demonstration
   hosts: all
-  remote_user: aryan
+    #remote_user: aryan
   become: true
   tasks:
     - name: Display message with debug
