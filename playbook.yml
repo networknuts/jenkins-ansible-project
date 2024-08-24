@@ -6,4 +6,4 @@
   tasks:
     - name: Display message with debug
       ansible.builtin.debug:
-        msg: "Congratulations! You have successfully executed a Playbook via Jenkins"
+        msg: "Congratulations! You have successfully executed a Playbook via Jenkins webhook"
