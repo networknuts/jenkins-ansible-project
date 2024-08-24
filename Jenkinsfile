@@ -1,7 +1,5 @@
 pipeline {
-    agent { 
-        label 'ansible_node'
-    }
+    agent any
     
     stages {
         stage('Checkout') {
